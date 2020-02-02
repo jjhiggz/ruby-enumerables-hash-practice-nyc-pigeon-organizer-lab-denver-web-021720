@@ -41,7 +41,7 @@ a = color.reduce({}) do |memo,(key, value)|
 end
 
 b=gender.reduce({})do |memo,(key, value)|
-binding.pry
+#binding.pry
 i=0
  while i<gender[key].length
     if newHash[value[i].to_sym][:gender]
