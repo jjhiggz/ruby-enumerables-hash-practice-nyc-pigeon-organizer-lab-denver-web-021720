@@ -30,11 +30,11 @@ a = color.reduce({}) do |memo,(key, value)|
   i = 0
   while i<color[key].length
 #binding.pry
-    if newHash[value[i].to_sym]
-      newHash[value[i].to_sym][:color].push(key.to_s)
+    if newHash[value[i]]
+      newHash[value[i]][:color].push(key.to_s)
     else
     #  binding.pry
-      newHash[value[i].to_sym] = {:color =>[key.to_s] }
+      newHash[value[i]] = {:color =>[key.to_s] }
     end
     i=i+1
   end
@@ -44,11 +44,11 @@ b=gender.reduce({})do |memo,(key, value)|
 #binding.pry
 i=0
  while i<gender[key].length
-    if newHash[value[i].to_sym][:gender]
-      newHash[value[i].to_sym][:gender].push(key.to_s)
+    if newHash[value[i]][:gender]
+      newHash[value[i]][:gender].push(key.to_s)
     else
     #  binding.pry
-      newHash[value[i].to_sym][:gender] = [key.to_s]
+      newHash[value[i]][:gender] = [key.to_s]
     end
     i=i+1
   end
@@ -58,11 +58,11 @@ c=lives.reduce({})do |memo,(key, value)|
 #binding.pry
 i=0
  while i<lives[key].length
-    if newHash[value[i].to_sym][:lives]
-      newHash[value[i].to_sym][:lives].push(key.to_s)
+    if newHash[value[i]][:lives]
+      newHash[value[i]][:lives].push(key.to_s)
     else
     #  binding.pry
-      newHash[value[i].to_sym][:lives] = [key.to_s]
+      newHash[value[i]][:lives] = [key.to_s]
     end
     i=i+1
   end
