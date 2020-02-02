@@ -29,7 +29,7 @@ a = color.reduce({}) do |memo,(key, value)|
 
   while i<color[key].length
     if newHash[value[i].to_sym]
-    
+
       newHash[value[i].to_sym].push(key.to_s)
     else
       newHash[value[i].to_sym] = [key.to_s]
