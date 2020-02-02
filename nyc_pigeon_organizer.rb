@@ -28,11 +28,11 @@ a = color.reduce({}) do |memo,(key, value)|
   i = 0
 
   while i<color[key].length
-    if newHash[value[i].to_sym]
+    if newHash[value[i].to_sym][key]
 
-      newHash[value[i].to_sym].push(key.to_s)
+      newHash[value[i].to_sym][key].push(key.to_s)
     else
-      newHash[value[i].to_sym] = [key.to_s]
+      newHash[value[i].to_sym][key] = [key.to_s]
     end
     i=i+1
   end
