@@ -40,7 +40,7 @@ a = color.reduce({}) do |memo,(key, value)|
   end
 i=0
   while i<gender[key].length
-#binding.pry
+binding.pry
     if newHash[value[i].to_sym]
       newHash[value[i].to_sym][:gender].push(key.to_s)
     else
