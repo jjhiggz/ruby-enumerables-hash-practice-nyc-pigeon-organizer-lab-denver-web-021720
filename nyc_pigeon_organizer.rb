@@ -33,7 +33,7 @@ a = color.reduce({}) do |memo,(key, value)|
 
       newHash[value[i].to_sym][key].push(key.to_s)
     else
-      newHash[value[i].to_sym][key] = [key.to_s]
+      newHash[value[i].to_sym] = {:color =>[key.to_s] }
     end
     i=i+1
   end
