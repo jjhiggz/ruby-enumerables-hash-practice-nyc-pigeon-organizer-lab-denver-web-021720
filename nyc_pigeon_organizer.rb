@@ -20,7 +20,7 @@ data = {
 
 
 
-#def nyc_pigeon_organizer(data)
+def nyc_pigeon_organizer(data)
   # write your code here!
 newHash = {}
 color = data[:color]
@@ -68,6 +68,6 @@ i=0
   end
 
 end
-  puts newHash
+  return newHash
 
 #end
