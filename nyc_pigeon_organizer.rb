@@ -71,3 +71,4 @@ end
   return newHash
 
 end
+puts nyc_pigeon_organizer(data)
