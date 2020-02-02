@@ -24,6 +24,8 @@ data = {
   # write your code here!
 newHash = {}
 color = data[:color]
+gender = data[:gender]
+lives = data[:lives]
 a = color.reduce({}) do |memo,(key, value)|
   i = 0
   while i<color[key].length
@@ -36,6 +38,18 @@ a = color.reduce({}) do |memo,(key, value)|
     end
     i=i+1
   end
+  
+  while i<gender[key].length
+#binding.pry
+    if newHash[value[i].to_sym]
+      newHash[value[i].to_sym][:gender].push(key.to_s)
+    else
+    #  binding.pry
+      newHash[value[i].to_sym] = {:gender =>[key.to_s] }
+    end
+    i=i+1
+  end
+  
 end
   puts newHash
 
