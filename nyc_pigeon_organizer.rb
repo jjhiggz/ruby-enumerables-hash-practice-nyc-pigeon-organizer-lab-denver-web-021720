@@ -42,12 +42,13 @@ end
 
 b=gender.reduce({})do |memo,(key, value)|
 binding.pry
+i=0
  while i<gender[key].length
-    if newHash[value[i].to_sym]
+    if newHash[value[i].to_sym][:gender]
       newHash[value[i].to_sym][:gender].push(key.to_s)
     else
     #  binding.pry
-      newHash[value[i].to_sym] = {:gender =>[key.to_s] }
+      newHash[value[i].to_sym][:gender] = [key.to_s]
     end
     i=i+1
   end
