@@ -29,7 +29,6 @@ a = color.reduce({}) do |memo,(key, value)|
   while i<color[key].length
 binding.pry
     if newHash[value[i].to_sym]
-
       newHash[value[i].to_sym][:color].push(key.to_s)
     else
       binding.pry
