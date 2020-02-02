@@ -27,7 +27,7 @@ color = data[:color]
 a = color.reduce({}) do |memo,(key, value)|
   i = 0
   while i<color[key].length
-    binding.pry
+  
     if newHash[value[i].to_sym][:color]
 
       newHash[value[i].to_sym][:color].push(key.to_s)
