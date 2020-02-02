@@ -38,7 +38,7 @@ a = color.reduce({}) do |memo,(key, value)|
     end
     i=i+1
   end
-  
+
   while i<gender[key].length
 #binding.pry
     if newHash[value[i].to_sym]
@@ -49,7 +49,7 @@ a = color.reduce({}) do |memo,(key, value)|
     end
     i=i+1
   end
-  
+
 end
   puts newHash
 
