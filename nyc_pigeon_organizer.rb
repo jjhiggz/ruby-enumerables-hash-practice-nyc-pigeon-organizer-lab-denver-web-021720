@@ -54,6 +54,20 @@ i=0
   end
 
 end
+c=lives.reduce({})do |memo,(key, value)|
+#binding.pry
+i=0
+ while i<lives[key].length
+    if newHash[value[i].to_sym][:lives]
+      newHash[value[i].to_sym][:lives].push(key.to_s)
+    else
+    #  binding.pry
+      newHash[value[i].to_sym][:lives] = [key.to_s]
+    end
+    i=i+1
+  end
+
+end
   puts newHash
 
 #end
