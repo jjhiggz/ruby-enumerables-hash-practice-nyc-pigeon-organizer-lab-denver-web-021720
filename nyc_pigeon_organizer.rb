@@ -29,9 +29,10 @@ a = color.reduce({}) do |memo,(key, value)|
   while i<color[key].length
 
     if newHash[value[i].to_sym][:color]
-      binding.pry
+    
       newHash[value[i].to_sym][:color].push(key.to_s)
     else
+      binding.pry
       newHash[value[i].to_sym] = {:color =>[key.to_s] }
     end
     i=i+1
